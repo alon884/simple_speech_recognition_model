@@ -16,3 +16,5 @@ env/
 # dataset
 
 /dataset
+
+data.json
