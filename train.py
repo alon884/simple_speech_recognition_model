@@ -1,6 +1,6 @@
 
-
-
+import json
+import numpy as np
 
 
 DATA_PATH = "/media/alon/DATA/ProjectsForCV/proj1/dataset"
@@ -9,6 +9,28 @@ SAVED_MODEL_PATH = "/media/alon/DATA/ProjectsForCV/proj1/model.h5"
 LEARNING_RATE = 0.0001
 EPOCHS = 40
 BATCH_SIZE = 32
+
+
+def load_dataset(data_path):
+	with open(data_path,"r") as fp:
+		data = json.load(fp)
+
+	# extract inputs and targets
+	X = data["MFCCs"]
+	y = data["labels"]
+
+
+
+def get_data_splits(data_path):
+
+	# load dataset
+	X,y = load_dataset(data_path)
+
+	# create train/validation/test splits
+
+	# convert inputs from 2d to 3d arrays
+
+
 
 def main():
 
