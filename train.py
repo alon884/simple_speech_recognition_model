@@ -22,6 +22,9 @@ def load_dataset(data_path):
 
 	return X,y
 
+def build_model(input_shape, learning_rate):
+	
+
 
 
 def get_data_splits(data_path, test_size=0.1):
