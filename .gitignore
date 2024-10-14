@@ -17,4 +17,7 @@ env/
 
 /dataset
 
+
 data.json
+
+*.json
