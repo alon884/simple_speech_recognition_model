@@ -2,8 +2,11 @@
 
 import tensorflow.keras as keras
 import numpy as np
+import librosa
 
 MODEL_PATH =  "/media/alon/DATA/ProjectsForCV/proj1/model.h5"
+
+NUM_SAMPLES_TO_CONSIDER = 22050 # 1 sec
 
 class _Keyword_Spotting_Service:
 
@@ -37,7 +40,13 @@ class _Keyword_Spotting_Service:
 		return predicted_keyword
 
 	def preprocess(self,file_path):
-		pass
+		# load audio file
+		signal, sr = librosa.load(file_path)
+
+		# ensure consistency in the audio file length
+		if len(signal) > NUM_SAMPLES_TO_CONSIDER:
+
+		# extract MFCCs
 
 def _Keyword_Spotting_Service():
 
